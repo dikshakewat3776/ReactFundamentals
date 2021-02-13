@@ -1,0 +1,33 @@
+<!-- ESX SUPPORT USING babel -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="hello-container"></div>
+<script type="text/babel">
+    ReactDOM.render(
+        // React.createElement('div', null, "Hello React"),
+        // React.createElement('ul', null,
+        //     React.createElement('li', null, 'HELLO REACT'),
+        //     React.createElement('li', null, 'hello react'),
+        // ),
+
+        // JSX TYPE LIST
+        <ul>
+            <li>Hello World 1</li>
+            <li>Hello World 2</li>
+            <li>Hello World 3</li>
+        </ul>,
+        document.getElementById('hello-container'),
+    )
+</script>
+</body>
+</html>

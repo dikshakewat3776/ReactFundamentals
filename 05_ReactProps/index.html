@@ -1,0 +1,45 @@
+<!-- Props in React -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="component-container"></div>
+</body>
+<script type="text/babel">
+class MyComponent extends React.Component {
+    render() {
+        return <div>
+                    <h1>{this.props.text}</h1>
+                    <p>React Component</p>
+                    <p>{this.props.children}</p>
+                </div>
+            }
+}
+
+    // ReactDOM.render(<MyComponent text="Bye Component"/>, document.getElementById("component-container"))
+    
+    // Repetitive components
+    // ReactDOM.render(
+    //     <div>
+    //         <MyComponent text="Bye Component 1"/>
+    //         <MyComponent text="Bye Component 2"/>
+    //         <MyComponent text="Bye Component 3"/>
+    //     </div>, 
+
+    ReactDOM.render(
+        <div>
+            <MyComponent text="Bye Component 1">React Component 1</MyComponent>
+            <MyComponent text="Bye Component 2">React Component 2</MyComponent>
+            <MyComponent text="Bye Component 3">React Component 3</MyComponent>
+        </div>, 
+    document.getElementById("component-container"))
+</script>
+</html>

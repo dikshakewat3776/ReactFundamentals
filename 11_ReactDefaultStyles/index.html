@@ -1,0 +1,43 @@
+<!-- First React Component -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="react-container"></div>
+</body>
+
+<script type="text/babel">
+
+class Box extends React.Component {
+
+    MyStyles(){
+        return {
+            width: 100,
+            height: 100,
+            backgroundColor: "teal"
+        }
+    }
+
+    render() {
+        return <div id="mybox" style={this.MyStyles()}>
+                </div>
+            }
+}
+
+ReactDOM.render(<Box/>, document.getElementById("react-container"))
+
+</script>
+</html>
+
+

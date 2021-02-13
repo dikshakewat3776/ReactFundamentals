@@ -1,0 +1,41 @@
+<!-- Events in React  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="event-container"></div>
+</body>
+<script type="text/babel">
+class MyEvents extends React.Component {
+
+    editing(){
+        alert('Editing')
+    }
+
+    deleting(){
+        alert('Deleting')
+    }
+
+    render() {
+        return <div>
+                    <h1>Hello Events</h1>
+                    <span>
+                        <button onClick={this.editing}>Edit</button>
+                        <button onClick={this.deleting}>Delete</button>
+                    </span>
+                </div>
+            }
+}
+
+    ReactDOM.render(<MyEvents></MyEvents>, document.getElementById("event-container"))
+</script>
+</html> 
+
